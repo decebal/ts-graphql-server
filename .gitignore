@@ -1,0 +1,20 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directory
+node_modules
+
+# Vim
+*.swp
+
+#typings
+typings
+
+#build
+build
+
+/graphql.config.json
+/src/generated/
+!/.env

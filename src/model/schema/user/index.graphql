@@ -1,0 +1,35 @@
+# A registered user of Memoria.
+type User implements Entity {
+    id: ID!
+    name: Name
+    photo: Uri
+    timezone: Timezone
+    email: String
+    isStaff: Boolean
+}
+
+type UserEdge implements Edge {
+    node: User
+    cursor: Cursor!
+}
+
+type UsersConnection implements Connection {
+    edges: [UserEdge]
+    pageInfo: PageInfo!
+    totalCount: NaturalNumber
+}
+
+input StoreUserInput {
+    id: ID!
+    lastName: String
+    firstName: String
+    email: String
+    photo: String
+    timezone: Timezone
+    clientMutationId: String!
+}
+
+type StoreUserPayload {
+    user: User
+    clientMutationId: String!
+}

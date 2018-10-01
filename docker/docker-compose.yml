@@ -1,0 +1,14 @@
+version: '2'
+services:
+    api-service:
+        build: ../.
+        volumes:
+          - "../src:/var/www/api/src"
+          - "./pm2.json:/var/www/memoria-api/pm2.json"
+          - "./nodemon.json:/var/www/memoria-api/nodemon.json"
+          - './nginx/conf.d/memoria-api.conf:/etc/nginx/conf.d/memoria-api.conf'
+        ports:
+            - "81:80"
+        environment:
+            - "NODE_ENV=dev"
+            - APP_PORT=3001

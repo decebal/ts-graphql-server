@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#exec chpst -ulog svlogd -tt ./main
+exec 2>&1
+echo $(realpath $0) started
+
+mkdir /var/log/api-server 2>/dev/null
+chmod 777 -R /var/log/api-server 2>/dev/null
+
+exec svlogd -tt /var/log/api-server

@@ -1,0 +1,6 @@
+
+# A name for a human.
+type Name {
+    firstName: String
+    lastName: String
+}

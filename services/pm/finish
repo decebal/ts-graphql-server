@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export HOME=/var/www/api
+exec `pm2-runtime stop /var/www/api/pm2.json`

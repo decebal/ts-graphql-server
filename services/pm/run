@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export HOME=/var/www/api
+cd /var/www/api && exec `pm2-runtime start --json --no-auto-exit /var/www/api/pm2.json`

@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "script": "npm -- run dev",
+      "env": {
+        "production": false
+      },
+      "error_file": "/var/log/api.err",
+      "out_file": "/var/log/api.log"
+    }
+  ]
+}

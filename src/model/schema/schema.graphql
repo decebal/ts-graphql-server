@@ -1,0 +1,28 @@
+# import * from "./core/connection.graphql"
+# import * from "./core/entity.graphql"
+# import * from "./core/name.graphql"
+# import * from "./core/scalar.graphql"
+# import * from "./user/index.graphql"
+
+
+# The root query object.
+type Mutation {
+  StoreUser(input: StoreUserInput!): StoreUserPayload
+}
+
+# The root query object.
+type Query {
+  # The currently authenticated user.
+  viewer: User! @cacheControl(scope: PRIVATE, maxAge: 240)
+
+  # Users
+  users(
+    # Show Staff / Hide Staff accounts
+    withStaff: Boolean
+    first: NaturalNumber
+    after: Cursor
+    last: NaturalNumber
+    before: Cursor
+    sort: Sorting
+  ): UsersConnection
+}
