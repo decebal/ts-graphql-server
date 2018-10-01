@@ -4,9 +4,9 @@ services:
         build: ../.
         volumes:
           - "../src:/var/www/api/src"
-          - "./pm2.json:/var/www/memoria-api/pm2.json"
-          - "./nodemon.json:/var/www/memoria-api/nodemon.json"
-          - './nginx/conf.d/memoria-api.conf:/etc/nginx/conf.d/memoria-api.conf'
+          - "./pm2.json:/var/www/api/pm2.json"
+          - "./nodemon.json:/var/www/api/nodemon.json"
+          - './nginx/conf.d/api.conf:/etc/nginx/conf.d/api.conf'
         ports:
             - "81:80"
         environment:

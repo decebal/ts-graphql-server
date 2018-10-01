@@ -140,5 +140,5 @@ ENV NODE_ENV=production \
 COPY ./pm2*.json /var/www/api/
 
 COPY docker/nginx/nginx.conf /etc/nginx/nginx.conf
-COPY docker/nginx/conf.d/api.production.conf /etc/nginx/conf.d/api.conf
+COPY docker/nginx/conf.d/api.conf /etc/nginx/conf.d/api.conf
 

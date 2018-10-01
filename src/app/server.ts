@@ -25,27 +25,27 @@ const server = new ApolloServer({
       reqToken
     )(ctx);
   },
-  cache: new RedisCache({
-    host: REDIS_CACHE_HOST,
-    port: REDIS_CACHE_PORT,
-    db: REDIS_CACHE_DB,
-    connectTimeout: 5000,
-    reconnectOnError: function(err) {
-      console.log('Reconnect on error', err);
-      const targetError = 'READONLY';
-      if (err.message.slice(0, targetError.length) === targetError) {
-        return true;
-      }
-    },
-    retryStrategy: function(times) {
-      console.log('Redis Retry', times);
-      if (times >= 3) {
-        return undefined;
-      }
-      return Math.min(times * 50, 2000);
-    },
-    socket_keepalive: false
-  }),
+  // cache: new RedisCache({
+  //   host: REDIS_CACHE_HOST,
+  //   port: REDIS_CACHE_PORT,
+  //   db: REDIS_CACHE_DB,
+  //   connectTimeout: 5000,
+  //   reconnectOnError: function(err) {
+  //     console.log('Reconnect on error', err);
+  //     const targetError = 'READONLY';
+  //     if (err.message.slice(0, targetError.length) === targetError) {
+  //       return true;
+  //     }
+  //   },
+  //   retryStrategy: function(times) {
+  //     console.log('Redis Retry', times);
+  //     if (times >= 3) {
+  //       return undefined;
+  //     }
+  //     return Math.min(times * 50, 2000);
+  //   },
+  //   socket_keepalive: false
+  // }),
   dataSources: () => {
     return {
       imageApi: new ImageApi()
