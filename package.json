@@ -17,7 +17,7 @@
     "bunyan": "^1.8.12",
     "bunyan-format": "^0.2.1",
     "config": "^1.28.1",
-    "dotenv": "^6.0.0",
+    "dotenv": "^7.0.0",
     "graphql": "^0.13.2",
     "graphql-import": "^0.5.2",
     "graphql-resolvers": "^0.2.2",
