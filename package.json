@@ -46,7 +46,7 @@
     "nodemon": "1.19.1",
     "ora": "3.4.0",
     "prettier": "1.18.2",
-    "tslint": "5.16.0",
+    "tslint": "5.17.0",
     "tslint-config-prettier": "1.18.0",
     "typescript-eslint-parser": "21.0.2"
   }
