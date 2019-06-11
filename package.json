@@ -34,7 +34,7 @@
   "devDependencies": {
     "@types/bluebird": "3.5.27",
     "@types/config": "0.0.34",
-    "@types/core-js": "2.5.0",
+    "@types/core-js": "2.5.1",
     "@types/jsonwebtoken": "8.3.2",
     "@types/node": "10.14.8",
     "casual": "1.6.2",
