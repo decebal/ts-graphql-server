@@ -1,18 +1,18 @@
 import * as winston from 'winston';
-import {Loggly} from 'winston-loggly';
-import {LOG_LEVEL, LOG_TO_CONSOLE, LOGGLY_SUBDOMAIN, LOGGLY_TOKEN, NODE_ENV} from './environment/const';
+import {LOG_LEVEL, LOG_TO_CONSOLE, NODE_ENV} from './environment/const';
 
 // noinspection TsLint
-const logger = new winston.Logger({
-    level: LOG_LEVEL,
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.json(),
+    defaultMeta: { service: 'user-service' },
     transports: [
-        new Loggly({
-            token: LOGGLY_TOKEN,
-            subdomain: LOGGLY_SUBDOMAIN,
-            tags: ['api-' + NODE_ENV],
-            json: true,
-            level: LOG_LEVEL
-        })
+        //
+        // - Write to all logs with level `info` and below to `combined.log`
+        // - Write all logs error (and below) to `error.log`.
+        //
+        new winston.transports.File({ filename: 'error.log', level: LOG_LEVEL }),
+        new winston.transports.File({ filename: 'combined.log' })
     ]
 });
 
