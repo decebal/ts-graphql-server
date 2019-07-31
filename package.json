@@ -35,7 +35,7 @@
     "@types/config": "0.0.34",
     "@types/core-js": "2.5.2",
     "@types/jsonwebtoken": "8.3.2",
-    "@types/node": "10.14.13",
+    "@types/node": "10.14.14",
     "casual": "1.6.2",
     "chai": "4.2.0",
     "eslint-config-prettier": "6.0.0",
