@@ -1,4 +1,3 @@
-# A registered user of Memoria.
 type User implements Entity {
     id: ID!
     name: Name

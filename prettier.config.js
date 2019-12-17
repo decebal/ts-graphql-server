@@ -1,7 +1,11 @@
 /* eslint-disable */
 
 module.exports = {
-  semi: false,
-  singleQuote: true,
-  trailingComma: "all"
-};
+  "printWidth": 100,
+  "semi": false,
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "tabWidth": 2
+}
