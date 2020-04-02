@@ -16,7 +16,7 @@
     "apollo-server-koa": "2.11.0",
     "config": "3.3.0",
     "dotenv": "8.2.0",
-    "graphql": "14.6.0",
+    "graphql": "15.0.0",
     "graphql-import": "1.0.1",
     "graphql-resolvers": "0.4.2",
     "graphql-tools": "4.0.7",
