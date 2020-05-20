@@ -29,7 +29,7 @@
     "winston": "3.2.1"
   },
   "devDependencies": {
-    "@types/bluebird": "3.5.31",
+    "@types/bluebird": "3.5.32",
     "@types/config": "0.0.36",
     "@types/core-js": "2.5.3",
     "@types/jsonwebtoken": "8.5.0",
