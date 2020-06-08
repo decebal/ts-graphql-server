@@ -19,7 +19,7 @@
     "graphql": "15.1.0",
     "graphql-import": "1.0.2",
     "graphql-resolvers": "0.4.2",
-    "graphql-tools": "6.0.8",
+    "graphql-tools": "6.0.9",
     "jsonwebtoken": "8.5.1",
     "koa": "2.12.0",
     "node-fetch": "2.6.0",
